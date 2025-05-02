@@ -1,0 +1,64 @@
+/* Outer Container Styling */
+.login-container {
+    padding: 0;
+  }
+  
+  /* Image Column Styling */
+  .image-column {
+    padding: 0;
+  }
+  
+  .full-height-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Form Column Styling */
+  .form-column {
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+  
+  .login-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  
+  /* Navbar Custom Styling */
+.custom-navbar {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 1030;
+  }
+  
+  /* Add top padding to body or hero image to avoid overlap */
+  .hero-image-container {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 50px; /* Adjust based on actual navbar height */
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-height: 90vh;
+  }
+
+  .navbar .btn {
+    font-weight: 500;
+    border-radius: 20px;
+  }

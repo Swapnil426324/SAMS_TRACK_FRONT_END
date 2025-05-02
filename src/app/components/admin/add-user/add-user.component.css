@@ -1,0 +1,57 @@
+.add-user-wrapper {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    overflow: hidden;
+  }
+  
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png') repeat;
+    opacity: 0.06;
+    z-index: 0;
+  }
+  
+  .add-user-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    max-width: 800px;
+    z-index: 1;
+  }
+  
+  .add-user-card h3 {
+    color: #2c3e50;
+  }
+  
+  .form-control,
+  .form-select {
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #4a69bd;
+    box-shadow: 0 0 5px rgba(74, 105, 189, 0.5);
+  }
+  
+  .btn-primary {
+    background-color: #4a69bd;
+    border: none;
+    font-weight: 500;
+    border-radius: 0.5rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3b55a0;
+  }
+
+  span{
+    color: red;
+  }

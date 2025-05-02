@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #80e2e2;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.custom-navbar {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  color: #007bff !important;
+  font-weight: 600;
+}
+
+.navbar .btn {
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+/* Hero Section */
+section.text-center {
+  padding: 100px 20px 60px;
+  background: #f0f4f8;
+}
+
+.display-4 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0b0c0c;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+/* About Section */
+section#about,
+section.about-section,
+.container .row {
+  margin-top: 60px;
+}
+
+.about-section {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #80e2e2;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #80e2e2;
+}
+
+.about-section img {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.about-section img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Alignment */
+@media (max-width: 767.98px) {
+  .about-section .row {
+    text-align: center;
+  }
+
+  .about-section img {
+    margin-top: 20px;
+    max-width: 90%;
+  }
+}
+
+
+/* Features Section */
+section.bg-light {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+/* Features / Services Section */
+.services-section .service-box {
+  background: white;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #cf6d6d;
+}
+.services-section .service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.services-section h5 {
+  font-weight: bold;
+}
+
+section.bg-light h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1ed8d8;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+section.bg-light h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+section.bg-light .row > div {
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+section.bg-light .row > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #eaf6ff;
+}
+
+section.bg-light h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111d2b;
+  margin-bottom: 15px;
+}
+
+section.bg-light p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .hero-image-container {
+    margin-top: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+<app-admin-menu></app-admin-menu>
+
+<div class="add-user-wrapper">
+    <div class="bg-overlay"></div>
+  
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div class="card add-user-card p-4 w-100">
+        <h3 class="text-center mb-4">Edit User</h3>
+  
+        <form >
+          <div class="row g-3">
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" [(ngModel)]="user.username" class="form-control"  name="username" id="username">
+              </div>
+  
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" [(ngModel)]="user.password" id="password" name="password" class="form-control">
+              </div>
+  
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" [(ngModel)]="user.firstName" id="firstName" class="form-control" name="firstName">
+              </div>
+            </div>
+  
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" [(ngModel)]="user.lastName" id="lastName" class="form-control" name="lastName">
+              </div>
+  
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" [(ngModel)]="user.email" id="email" class="form-control" name="email">
+              </div>
+  
+              <div class="mb-3">
+                <label for="role" class="form-label">Role</label>
+                <select id="role" [(ngModel)]="user.role" class="form-select" name="role">
+                  <option value="" selected disabled>Select role</option>
+                  <option value="admin">Admin</option>
+                  <option value="faculty">Faculty</option>
+                </select>
+              </div>
+            </div>
+  
+            <!-- Full-width button -->
+            <div class="col-12">
+              <button (click)="updateUser()" class="btn btn-primary w-100">Update User</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
