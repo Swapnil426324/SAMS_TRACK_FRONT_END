@@ -15,6 +15,8 @@ import { AddStudentComponent } from './components/faculty/add-student/add-studen
 import { AllStudentComponent } from './components/faculty/all-student/all-student.component';
 import { TakeAttendanceComponent } from './components/faculty/take-attendance/take-attendance.component';
 import { ViewAttendanceComponent } from './components/faculty/view-attendance/view-attendance.component';
+import { EditStudentComponent } from './components/faculty/edit-student/edit-student.component';
+import { ProfileComponent } from './common/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -59,6 +61,12 @@ const routes: Routes = [
     path:'edit-subject/:subjectid',
     component:EditSubjectComponent
   },
+
+  {
+    path:'edit-student/:id',
+    component:EditStudentComponent
+  },
+
   {
     path:'view-all-attendance',
     component:ViewAllAttendanceComponent
@@ -79,6 +87,10 @@ const routes: Routes = [
   {
     path:'view-attendance',
     component:ViewAttendanceComponent
+  },
+  {
+    path:'view-profile',
+    component:ProfileComponent
   }
 ];
 

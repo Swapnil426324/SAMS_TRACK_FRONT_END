@@ -1,0 +1,68 @@
+<app-admin-menu></app-admin-menu>
+<div class="profile-wrapper">
+  <div class="sidebar">
+    <img src="assets/user.jpg" alt="Profile" class="profile-photo" />
+
+    <div class="section">
+      <h4>Work</h4>
+      <div class="work">
+        <strong>Spotify New York</strong><span class="tag">Primary</span>
+        <p>170 William Street, NY</p>
+      </div>
+      <div class="work">
+        <strong>Metropolitan Museum</strong><span class="tag secondary">Secondary</span>
+        <p>525 E 68th Street, NY</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h4>Skills</h4>
+      <ul>
+        <li>Branding</li>
+        <li>UI/UX</li>
+        <li>Web Design</li>
+        <li>Packaging</li>
+        <li>Print & Editorial</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-content">
+    <div class="header">
+      <div>
+        <h2>Jeremy Rose</h2>
+        <span class="role">Product Designer</span> · <span>New York, NY</span>
+      </div>
+    </div>
+
+    <div class="rating">
+      <strong>Rating:</strong> 8.6 ★★★★☆
+    </div>
+
+    <div class="actions">
+      <button>Send Message</button>
+      <button class="btn-secondary">Contacts</button>
+    </div>
+
+    <div class="tabs">
+      <span [class.active]="activeTab === 'timeline'" (click)="setActiveTab('timeline')">Timeline</span>
+      <span [class.active]="activeTab === 'about'" (click)="setActiveTab('about')">About</span>
+    </div>
+
+    <div *ngIf="activeTab === 'about'" class="about-section">
+      <h4>Contact Information</h4>
+      <p><strong>Phone:</strong> <a href="#">+1 123 456 7890</a></p>
+      <p><strong>Address:</strong> 525 E 68th Street, NY</p>
+      <p><strong>Email:</strong> <a href="#">hello@jeremyrose.com</a></p>
+      <p><strong>Site:</strong> <a href="#">www.jeremyrose.com</a></p>
+
+      <h4>Basic Information</h4>
+      <p><strong>Birthday:</strong> June 5, 1992</p>
+      <p><strong>Gender:</strong> Male</p>
+    </div>
+
+    <div *ngIf="activeTab === 'timeline'" class="timeline-section">
+      <p>Timeline content goes here...</p>
+    </div>
+  </div>
+</div>

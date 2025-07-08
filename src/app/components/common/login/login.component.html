@@ -1,39 +1,60 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">SAMS TRACK</a>
-      <div class="d-flex ms-auto">
-        <a class="btn btn-outline-primary" routerLink="">Home</a>
-      </div>
-    </div>
-  </nav>
-
-<div class="container-fluid login-container">
-    <div class="row align-items-center min-vh-100">
-      
-      <!-- Left Column: Image -->
-      <div class="col-md-6 d-none d-md-block image-column">
-        <img src="assets/login-image.jpg" alt="Login Visual" class="img-fluid full-height-image" />
-      </div>
-  
-      <!-- Right Column: Login Form -->
-      <div class="col-md-6 col-12 form-column d-flex justify-content-center align-items-center">
-        <div class="login-form-wrapper">
-          
-          <h2 class="login-heading">Login</h2>
-          <form>
-            <div class="mb-3">
-              <label for="username" class="form-label">Usernmae</label>
-              <input type="username" class="form-control" id="username" name="username" [(ngModel)]="userCredentials.username" placeholder="Enter Username">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userCredentials.password" placeholder="Password">
-            </div>
-            <button (click)="loginUser()" class="btn btn-primary w-100">Login</button>
-          </form>
-        </div>
-      </div>
-  
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">SAMS <span class="text-success">TRACK</span></a>
+    <div class="d-flex ms-auto">
+      <a class="btn btn-outline-primary" routerLink="">Home</a>
     </div>
   </div>
-  
+</nav>
+
+<div class="container-fluid login-container">
+  <div class="row align-items-center min-vh-100">
+
+    <!-- Left Column: Image -->
+    <div class="col-md-6 d-none d-md-block image-column">
+      <img src="assets/login-image.jpg" alt="Login Visual" class="img-fluid full-height-image" />
+    </div>
+
+    <!-- Right Column: Login Form -->
+    <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+      <div class="login-form-wrapper shadow-lg p-4 bg-white rounded">
+
+        <h2 class="login-heading mb-4 text-center text-success">Login to SAMS</h2>
+
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              [(ngModel)]="userCredentials.username"
+              placeholder="Enter your username"
+              required
+            >
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="userCredentials.password"
+              placeholder="Enter your password"
+              required
+            >
+          </div>
+          <button (click)="loginUser()" class="btn btn-success w-100">Login</button>
+        </form>
+
+        <div class="mt-3 text-center">
+          <small class="text-muted">Forgot password? <a href="#">Click here</a></small>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -31,4 +31,9 @@ export class SubjectService {
     return this.http.put(apiUrl, subject);
   }
 
+  deleteSubject(id: any){
+    const apiUrl = `http://localhost:8091/subject/delete-subject/${id}`;
+    return this.http.delete(apiUrl);
+  }
+
 }

@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">SAMS TRACK</a>
+    <a class="navbar-brand fw-bold text-primary fs-4" href="#">SAMS <span class="text-success">TRACK</span></a>
     <div class="d-flex ms-auto">
       <a class="btn btn-outline-primary" routerLink="/login">Login</a>
     </div>
@@ -8,66 +9,63 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="mt-5 pt-5 text-center">
-  <h1 class="display-4">Welcome to SAMS TRACK</h1>
-  <p class="lead">Your one-stop solution for attendance and student management system</p>
+<section class="hero-section mt-5 pt-5 text-center bg-light">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Welcome to <span class="text-success">SAMS TRACK</span></h1>
+    <p class="lead animate__animated animate__fadeInUp">Your one-stop solution for attendance and student management</p>
 
-  <!-- Full Width Responsive Image -->
-  <div class="hero-image-container mt-4">
-    <img src="assets/hero-image.jpg" alt="Hero" class="img-fluid hero-image" />
-  </div> 
+    <!-- <div class="hero-image-container mt-4">
+      <img src="assets/hero-image.jpg" alt="Hero" class="img-fluid rounded shadow-lg" />
+    </div> -->
+  </div>
 </section>
 
 <!-- About Section -->
 <section class="container my-5">
-  <div class="row">
-    <div class="col-md-6">
-      <h2>About SAMS TRACK</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <h2 class="fw-bold text-primary">About <span class="text-success">SAMS TRACK</span></h2>
       <p>
         SAMS TRACK is a smart system built to streamline student attendance, academic monitoring, and record management.
         It is ideal for educational institutions aiming to digitize and simplify their administrative processes.
       </p>
+      <a class="btn btn-outline-success mt-2" href="#">Know More</a>
     </div>
     <div class="col-md-6">
-      <img src="assets/about-image1.jpg" class="img-fluid rounded" alt="About Image">
+      <img src="assets/about-image1.jpg" class="img-fluid rounded shadow" alt="About Image">
     </div>
   </div>
 </section>
 
 <!-- Features Section -->
-   <section class="py-5 services-section text-dark text-center">
-    <div class="container">
-      <h2 class="mb-5">Features</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="service-box p-4 rounded shadow">
-            <i class="bi bi-code-slash display-4 mb-3 text-info"></i>
-            <h5>🔒 Secure Login</h5>
-            <p>Only authorized users can access the system with secure authentication.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Learn More</a>
-          </div>
+<section class="py-5 bg-white text-dark text-center">
+  <div class="container">
+    <h2 class="mb-5 fw-bold text-primary">Our Features</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-box p-4 rounded shadow-sm h-100 hover-effect">
+          <i class="bi bi-lock-fill display-4 mb-3 text-info"></i>
+          <h5>🔒 Secure Login</h5>
+          <p>Only authorized users can access the system with secure authentication.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2">Learn More</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-box p-4 rounded shadow">
-            <i class="bi bi-map-fill display-4 mb-3 text-warning"></i>
-            <h5>📊 Real-time Reports</h5>
-            <p>Get attendance and academic reports instantly with interactive dashboards.</p>
-            <a href="#" class="btn btn-outline-warning btn-sm mt-2">See Reports</a>
-          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box p-4 rounded shadow-sm h-100 hover-effect">
+          <i class="bi bi-bar-chart-fill display-4 mb-3 text-warning"></i>
+          <h5>📊 Real-time Reports</h5>
+          <p>Get attendance and academic reports instantly with interactive dashboards.</p>
+          <a href="#" class="btn btn-outline-warning btn-sm mt-2">See Reports</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-box p-4 rounded shadow">
-            <i class="bi bi-translate display-4 mb-3 text-success"></i>
-            <h5>📁 Easy Record Management</h5>
-            <p>Maintain digital records for students, teachers, and courses with ease.</p>
-            <a href="#" class="btn btn-outline-success btn-sm mt-2">Explore More</a>
-          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box p-4 rounded shadow-sm h-100 hover-effect">
+          <i class="bi bi-folder-fill display-4 mb-3 text-success"></i>
+          <h5>📁 Easy Record Management</h5>
+          <p>Maintain digital records for students, teachers, and courses with ease.</p>
+          <a href="#" class="btn btn-outline-success btn-sm mt-2">Explore More</a>
         </div>
       </div>
     </div>
-  </section>
-
-
-
-
-
+  </div>
+</section>

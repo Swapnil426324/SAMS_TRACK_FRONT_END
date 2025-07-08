@@ -1,35 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-4">
-  <a class="navbar-brand" routerLink="/admin-dashboard">Admin Panel</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3 px-4 fixed-top">
+  <!-- <a class="navbar-brand fw-bold text-primary" routerLink="/admin-dashboard">Admin Panel</a> -->
+   <a class="navbar-brand fw-bold text-primary fs-4" href="#">ADMIN <span class="text-success">PANAL</span></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar" aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse justify-content-between" id="adminNavbar">
-    <!-- Centered menu -->
+  <div class="collapse navbar-collapse" id="adminNavbar">
+    
+    <!-- Center-aligned navigation links -->
     <ul class="navbar-nav mx-auto text-center">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/add-user">Add User</a>
+        <a class="nav-link" routerLink="/add-user" routerLinkActive="active">Add User</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/all-users">All Users</a>
+        <a class="nav-link" routerLink="/all-users" routerLinkActive="active">All Users</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/edit-user" routerLinkActive="active">Edit User</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/add-subject" routerLinkActive="active">Add Subject</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/edit-user">Edit User</a>
+        <a class="nav-link" routerLink="/all-subject" routerLinkActive="active">All Subjects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/add-subject">Add Subject</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/all-subject">All Subject</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/view-all-attendance">View All Attendance</a>
+        <a class="nav-link" routerLink="/view-all-attendance" routerLinkActive="active">View Attendance</a>
       </li>
     </ul>
 
-    <!-- Right-aligned buttons -->
+    <!-- Right-aligned actions -->
     <div class="d-flex align-items-center gap-2">
-      <a href="#" class="btn btn-outline-info btn-sm">Profile</a>
+      <a routerLink="/view-profile" class="btn btn-outline-info btn-sm">Profile</a>
       <a routerLink="" class="btn btn-danger btn-sm">Logout</a>
     </div>
   </div>

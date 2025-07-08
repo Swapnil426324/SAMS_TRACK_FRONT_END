@@ -25,6 +25,7 @@ import { ViewAttendanceComponent } from './components/faculty/view-attendance/vi
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AllUsersComponent } from './components/admin/all-users/all-users.component';
+import { ProfileComponent } from './common/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { AllUsersComponent } from './components/admin/all-users/all-users.compon
     EditStudentComponent,
     TakeAttendanceComponent,
     ViewAttendanceComponent,
-    AllUsersComponent
+    AllUsersComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { AllUsersComponent } from './components/admin/all-users/all-users.compon
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

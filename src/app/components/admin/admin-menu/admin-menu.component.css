@@ -1,22 +1,33 @@
-/* Centered nav items spacing */
-.navbar-nav .nav-link {
-  font-weight: 500;
-  padding: 0.5rem 1rem;
+.nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 991.98px) {
+.nav-link:hover {
+  color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.1);
+  border-radius: 5px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #0d6efd !important;
+}
+
+.navbar {
+  z-index: 1050; /* Ensure it stays above other content */
+}
+
+@media (max-width: 768px) {
   .navbar-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar-collapse {
-    text-align: center;
-  }
-
-  .d-flex.gap-2 {
-    justify-content: center;
     margin-top: 1rem;
   }
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.navbar-brand span {
+  color: #198754;
 }

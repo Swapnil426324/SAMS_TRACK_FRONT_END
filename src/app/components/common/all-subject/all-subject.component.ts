@@ -22,4 +22,11 @@ export class AllSubjectComponent {
     })
   }
 
+  deleteSubject(id : any){
+     this.subjectService.deleteSubject(id).subscribe((res)=>{
+      
+      this.allSubjects();
+      alert(res);
+     })
+  }
 }

@@ -1,44 +1,28 @@
 <app-admin-menu></app-admin-menu>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Subject</title>
-</head>
-<body>
+<div class="all-subject-container">
+  <h2 class="title">All Subjects</h2>
 
-
-<div class="container mt-4">
-  <h2 class="text-center page-title">All Subject</h2>
-
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover">
-      <thead class="table-dark">
+  <div class="table-wrapper">
+    <table class="custom-table">
+      <thead>
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>ACTION</th>
+          <th>Action</th>
         </tr>
       </thead>
 
       <tbody>
         <tr *ngFor="let subject of subjectList">
           <td>{{ subject.id }}</td>
-          <td>{{ subject.name}}</td>
-
+          <td>{{ subject.name }}</td>
           <td>
-
-            <a class="btn btn-success" [routerLink]="['/edit-subject', subject.id]">Edit</a>
-
+            <a class="btn edit-btn" [routerLink]="['/edit-subject', subject.id]">Edit</a>
+            <button class="btn delete-btn" (click)="deleteSubject(subject.id)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-
-</body>
-</html>
-

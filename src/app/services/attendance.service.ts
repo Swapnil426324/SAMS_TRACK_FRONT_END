@@ -16,7 +16,7 @@ export class AttendanceService {
 
   allAttendance(): Observable<any> {
     const apiUrl = `http://localhost:8091/attendance/get-all-attendance-records`;
-    return this.http.get(apiUrl);
+    return this.http.get<any[]>(apiUrl);
   }
 
 

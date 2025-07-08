@@ -1,64 +1,80 @@
-/* Outer Container Styling */
+/* Login Page Styling */
 .login-container {
-    padding: 0;
-  }
-  
-  /* Image Column Styling */
-  .image-column {
-    padding: 0;
-  }
-  
-  .full-height-image {
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  /* Form Column Styling */
-  .form-column {
-    background-color: #f8f9fa;
-    padding: 2rem;
-  }
-  
+  padding-top: 70px;
+  background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+}
+
+/* Form box */
+.login-form-wrapper {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.login-form-wrapper:hover {
+  box-shadow: 0 0 20px rgba(25, 135, 84, 0.2);
+}
+
+/* Heading */
+.login-heading {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+/* Inputs */
+input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease-in-out;
+}
+
+input.form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 8px rgba(25, 135, 84, 0.2);
+}
+
+/* Buttons */
+.btn-success {
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  transform: scale(1.02);
+}
+
+/* Image styling */
+.image-column {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-height-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .login-form-wrapper {
-    width: 100%;
-    max-width: 400px;
+    padding: 20px;
+    box-shadow: none;
   }
-  
+
   .login-heading {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: 600;
-    text-align: center;
+    font-size: 24px;
   }
-
-  
-  /* Navbar Custom Styling */
-.custom-navbar {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    z-index: 1030;
-  }
-  
-  /* Add top padding to body or hero image to avoid overlap */
-  .hero-image-container {
-    width: 100%;
-    overflow: hidden;
-    padding-top: 50px; /* Adjust based on actual navbar height */
-  }
-  
-  .hero-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    max-height: 90vh;
-  }
-
-  .navbar .btn {
-    font-weight: 500;
-    border-radius: 20px;
-  }
+.full-height-image {
+  max-width: 80%;       /* Controls image width */
+  max-height: 500px;    /* Controls image height */
+  object-fit: contain;  /* Keeps the aspect ratio */
+  margin: auto;         /* Optional: centers the image */
+  display: block;       /* Optional: ensures it behaves like a block */
+}
+}

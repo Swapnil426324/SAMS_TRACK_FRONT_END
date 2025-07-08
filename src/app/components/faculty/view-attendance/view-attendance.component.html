@@ -39,31 +39,31 @@
       <div class="col">
         <table class="table table-bordered table-striped">
           <thead class="table-dark">
-            <tr>
-              <th>#</th>
-              <th>Faculty</th>
-              <th>Subject</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Number of Students</th>
-              <th>Show Students</th>
-            </tr>
+           <tr>
+          <th>#</th>
+          <th>Faculty</th>
+          <th>Subject</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Students</th>
+          <th>Details</th>
+        </tr>
           </thead>
           <tbody id="attendanceTableBody">
             <!-- Data will be inserted dynamically -->
             <tr *ngFor="let record of attendanceRecords; let i = index">
-                <td>{{ i + 1 }}</td>
-              <td>{{ record.user.firstName | titlecase }} {{ record.user.lastName | titlecase }}</td>
-              <td>{{ record.subject.name | titlecase }}</td>
-              <td>{{ record.date | date }}</td>
-              <td>{{ record.time }}</td>
-              <td>{{ record.numberOfStudents }}</td>
-              <td>
-                <button class="btn btn-info" (click)="showStudents(record.students)" data-bs-toggle="modal" data-bs-target="#studentModal">
-                  Show
-                </button>
-              </td>
-            </tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ record.user?.firstName | titlecase }} {{ record.user?.lastName | titlecase }}</td>
+          <td>{{ record.subject?.name | titlecase }}</td>
+          <td>{{ record.date | date }}</td>
+          <td>{{ record.time }}</td>
+          <td>{{ record.numberOfStudents }}</td>
+          <td>
+            <button class="btn info" (click)="showStudents(record.students)" data-bs-toggle="modal" data-bs-target="#studentModal">
+              Show
+            </button>
+          </td>
+        </tr>
           </tbody>
         </table>
       </div>

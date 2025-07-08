@@ -1,64 +1,59 @@
 <app-admin-menu></app-admin-menu>
 
-<div class="admin-dashboard bg-light position-relative">
-  <!-- Transparent background image -->
-  <div class="bg-overlay"></div>
+<div class="admin-dashboard">
+  <div class="dashboard-overlay"></div>
 
-  <div class="container py-5">
-    <h2 class="text-center mb-4">Admin Dashboard</h2>
-
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title">Add User</h5>
-            <p class="card-text">Create a new user and assign roles.</p>
-            <a routerLink="/add-user" class="btn btn-primary btn-sm">Go to Add User</a>
-          </div>
+  <div class="dashboard-container">
+    <!-- <h2 class="dashboard-title">Admin Dashboard</h2> -->
+    <h2 class="dashboard-title">ADMIN <span class="text-success">PANAL</span></h2>
+    <div class="card-grid">
+      <!-- Card 1 -->
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h5 class="card-title">Add User</h5>
+          <p class="card-description">Create a new user and assign roles.</p>
+          <a routerLink="/add-user" class="card-button">Go to Add User</a>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title">All Users</h5>
-            <p class="card-text">View and manage all registered users.</p>
-            <a href="#" class="btn btn-primary btn-sm">View All Users</a>
-          </div>
+      <!-- Card 2 -->
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h5 class="card-title">All Users</h5>
+          <p class="card-description">View and manage all registered users.</p>
+          <a href="#" class="card-button">View All Users</a>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title">Edit User</h5>
-            <p class="card-text">Search and update user information.</p>
-            <a href="#" class="btn btn-primary btn-sm">Edit Users</a>
-          </div>
+      <!-- Card 3 -->
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h5 class="card-title">Edit User</h5>
+          <p class="card-description">Search and update user information.</p>
+          <a href="#" class="card-button">Edit Users</a>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title">Add Subject</h5>
-            <p class="card-text">Insert a new subject into the system.</p>
-            <a href="#" class="btn btn-primary btn-sm">Add Subject</a>
-          </div>
+      <!-- Card 4 -->
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h5 class="card-title">Add Subject</h5>
+          <p class="card-description">Insert a new subject into the system.</p>
+          <a href="#" class="card-button">Add Subject</a>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title">All Subjects</h5>
-            <p class="card-text">Browse all subjects with details.</p>
-            <a href="#" class="btn btn-primary btn-sm">View All Subjects</a>
-          </div>
+      <!-- Card 5 -->
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h5 class="card-title">All Subjects</h5>
+          <p class="card-description">Browse all subjects with details.</p>
+          <a href="#" class="card-button">View All Subjects</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
   

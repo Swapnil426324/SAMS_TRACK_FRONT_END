@@ -83,4 +83,17 @@ export class ViewAllAttendanceComponent implements OnInit{
       }
     })
 }
+
+fetchAllAttendanceRecords1() {
+  this.attendanceService.allAttendance().subscribe((res) => {
+    console.log("All Attendance Response:", res); // Add this line
+    this.attendanceRecords = res;
+    if (this.attendanceRecords.length === 0) {
+      alert("No attendance records found for the selected date");
+    }
+  }, (err) => {
+    console.error("Error fetching all attendance records", err);
+  });
+}
+
 }

@@ -1,96 +1,74 @@
 <app-admin-menu></app-admin-menu>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>View Attendance</title>
-
-</head>
-
-<body>
-  <div class="container">
-    <!-- Filter Row -->
-    <div class="row mb-3">
-      <div class="col-md-3">
-        <label for="faculty" class="form-label">Select Faculty</label>
-        <select id="faculty" class="form-select" (change)="changeUser($event)">
-          <option value="">Choose Faculty</option>
-          <!-- Populate dynamically -->
-          <option *ngFor="let user of users" [value]="user.username">{{ user.firstName }} {{ user.lastName }}</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label for="subject" class="form-label">Select Subject</label>
-        <select id="subject" class="form-select" (change)="changeSubject($event)">
-          <option value="">Choose Subject</option>
-          <!-- Populate dynamically -->
-          <option *ngFor="let subject of subjects" [value]="subject.id">{{ subject.name }}</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label for="date" class="form-label">Select Date</label>
-        <input type="date" id="date" class="form-control" (change)="changeDate($event)">
-      </div>
-
-      <div class="col-md-3 text-center">
-        <button class="btn btn-success w-100 mb-1" (click)="fetchAllAttendanceRecords()">Show All</button>
-        <button class="btn btn-primary w-100" (click)="fetchAttendanceRecords()">Show</button>
-      </div>
+<div class="view-attendance-container">
+  <!-- Filter Row -->
+  <div class="filter-row">
+    <div class="filter-group">
+      <label for="faculty">Select Faculty</label>
+      <select id="faculty" (change)="changeUser($event)">
+        <option value="">Choose Faculty</option>
+        <option *ngFor="let user of users" [value]="user.username">{{ user.firstName }} {{ user.lastName }}</option>
+      </select>
     </div>
-
-    <!-- Attendance Table -->
-    <div class="row">
-      <div class="col">
-        <table class="table table-bordered table-striped">
-          <thead class="table-dark">
-            <tr>
-              <th>#</th>
-              <th>Faculty</th>
-              <th>Subject</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Number of Students</th>
-              <th>Show Students</th>
-            </tr>
-          </thead>
-          <tbody id="attendanceTableBody">
-            <!-- Data will be inserted dynamically -->
-            <tr *ngFor="let record of attendanceRecords; let i = index">
-                <td>{{ i + 1 }}</td>
-              <td>{{ record.user.firstName | titlecase }} {{ record.user.lastName | titlecase }}</td>
-              <td>{{ record.subject.name | titlecase }}</td>
-              <td>{{ record.date | date }}</td>
-              <td>{{ record.time }}</td>
-              <td>{{ record.numberOfStudents }}</td>
-              <td>
-                <button class="btn btn-info" (click)="showStudents(record.students)" data-bs-toggle="modal" data-bs-target="#studentModal">
-                  Show
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="filter-group">
+      <label for="subject">Select Subject</label>
+      <select id="subject" (change)="changeSubject($event)">
+        <option value="">Choose Subject</option>
+        <option *ngFor="let subject of subjects" [value]="subject.id">{{ subject.name }}</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="date">Select Date</label>
+      <input type="date" id="date" (change)="changeDate($event)">
+    </div>
+    <div class="filter-group actions">
+      <button class="btn success" (click)="fetchAllAttendanceRecords()">Show All</button><br>
+      <button class="btn primary" (click)="fetchAttendanceRecords()">Show</button>
     </div>
   </div>
 
+  <!-- Attendance Table -->
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Faculty</th>
+          <th>Subject</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Students</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of attendanceRecords; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ record.user?.firstName | titlecase }} {{ record.user?.lastName | titlecase }}</td>
+          <td>{{ record.subject?.name | titlecase }}</td>
+          <td>{{ record.date | date }}</td>
+          <td>{{ record.time }}</td>
+          <td>{{ record.numberOfStudents }}</td>
+          <td>
+            <button class="btn info" (click)="showStudents(record.students)" data-bs-toggle="modal" data-bs-target="#studentModal">
+              Show
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-
-
-  <!-- Modal (Visible only when isModalOpen is true) -->
-<div *ngIf="isModalOpen" class="modal-overlay">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title">Student List</h5>
-      <button class="close-btn" (click)="closeModal()">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="row">
-        <div class="col-md-3 mb-3" *ngFor="let student of selectedStudents">
-          <div class="student-card p-2 border rounded text-center">
+  <!-- Modal -->
+  <div *ngIf="isModalOpen" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Student List</h5>
+        <span class="close-btn" (click)="closeModal()">×</span>
+      </div>
+      <div class="modal-body">
+        <div class="student-list">
+          <div class="student-item" *ngFor="let student of selectedStudents">
             {{ student.name }}
           </div>
         </div>
@@ -98,8 +76,3 @@
     </div>
   </div>
 </div>
-
-
-</body>
-
-</html>
